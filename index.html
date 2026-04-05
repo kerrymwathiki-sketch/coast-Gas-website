@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coast Gas Suppliers</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+📞 Call: <a href="tel:+254745344092">0745 344 092</a> | Fast Delivery in Kilifi
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+<h2>🔥 Coast <span>Gas Suppliers</span></h2>
+<a href="#order" class="btn">Order Now</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Affordable Gas Refilling at Your Doorstep</h1>
+<p>Safe • Fast • Reliable</p>
+<img src="images/hero-gas.jpg" alt="Gas Delivery" class="hero-img">
+
+<div class="hero-buttons">
+<a href="tel:+254745344092" class="btn">📞 Call Now</a>
+<a href="https://wa.me/254745344092" class="btn-outline">💬 WhatsApp</a>
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+<h2>Gas Prices</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/6kg.jpg" alt="6KG Gas Cylinder" class="product-img">
+<h3>6KG Refill</h3>
+<p>KSh 1,500</p>
+<button onclick="quickOrder('6KG Refill - 1500')">Order via WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="images/13kg.jpg" alt="13KG Gas Cylinder" class="product-img">
+<h3>13KG Refill</h3>
+<p>KSh 3,250</p>
+<button onclick="quickOrder('13KG Refill - 3250')">Order via WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="images/complete6kg.jpg" alt="Complete 6KG Gas Cylinder" class="product-img">
+<h3>Complete 6KG</h3>
+<p>KSh 3,800</p>
+<button onclick="quickOrder('Complete 6KG - 3800')">Order via WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="images/complete13kg.jpg" alt="Complete 13KG Gas Cylinder" class="product-img">
+<h3>Complete 13KG</h3>
+<p>KSh 6,800</p>
+<button onclick="quickOrder('Complete 13KG - 6800')">Order via WhatsApp</button>
+</div>
+
+</div>
+</section>
+
+<!-- ORDER FORM -->
+<section id="order" class="order">
+<h2>Place Order</h2>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="location" placeholder="Your Location">
+<select id="product">
+<option>6KG Refill</option>
+<option>13KG Refill</option>
+<option>Complete 6KG</option>
+<option>Complete 13KG</option>
+</select>
+
+<div class="order-buttons">
+<button onclick="sendWhatsApp()">Send via WhatsApp</button>
+<a href="tel:+254745344092" class="call-btn">📞 Call Instead</a>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+<h2>Contact Us</h2>
+<p>📞 0745 344 092</p>
+<p>📍 Kilifi, Kenya</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Coast Gas Suppliers</p>
+</footer>
+
+<script>
+const phone = "254745344092";
+
+// Quick order buttons
+function quickOrder(product){
+let message = `Hello, I want to order:\n${product}`;
+let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+window.open(url, '_blank');
+}
+
+// Full form order
+function sendWhatsApp(){
+let name = document.getElementById("name").value.trim();
+let location = document.getElementById("location").value.trim();
+let product = document.getElementById("product").value;
+
+if(name === "" || location === ""){
+alert("Please fill in all fields");
+return;
+}
+
+let message = `Hello, I want to order:\n${product}\nName: ${name}\nLocation: ${location}`;
+let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>

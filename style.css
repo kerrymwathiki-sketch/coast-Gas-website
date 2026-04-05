@@ -1,0 +1,224 @@
+/* GENERAL */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background: #f5f5f5;
+font-size: 16px;
+line-height: 1.6;
+}
+
+/* TOP BAR */
+.top-bar {
+background: #ff3b00;
+color: white;
+padding: 10px;
+text-align: center;
+}
+
+.top-bar a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* NAVBAR */
+.navbar {
+display: flex;
+justify-content: space-between;
+padding: 15px 20px;
+background: white;
+align-items: center;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar span {
+color: #ff3b00;
+}
+
+/* BUTTONS */
+.btn {
+background: #ff3b00;
+color: white;
+padding: 10px 15px;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s ease;
+}
+
+.btn:hover {
+background-color: #cc2b00;
+}
+
+.btn-outline {
+border: 2px solid white;
+color: white;
+padding: 10px 15px;
+text-decoration: none;
+margin-left: 10px;
+transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+background-color: #ff3b00;
+color: white;
+}
+
+/* HERO */
+.hero {
+background: linear-gradient(to right, #1a0000, #330000);
+color: white;
+padding: 60px 20px;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 2.5rem;
+margin-bottom: 10px;
+}
+
+.hero p {
+font-size: 1.2rem;
+color: #ffcccb;
+}
+
+.hero-buttons {
+margin-top: 20px;
+}
+
+.hero-img {
+max-width: 300px;
+margin: 20px auto 0 auto;
+display: block;
+border-radius: 10px;
+}
+
+/* PRICING */
+.pricing {
+padding: 30px;
+text-align: center;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+gap: 15px;
+}
+
+.card {
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+.card h3 {
+margin-bottom: 5px;
+}
+
+.card p {
+margin-bottom: 10px;
+font-weight: bold;
+font-size: 1.1rem;
+}
+
+.card button {
+margin-top: 10px;
+background: green;
+color: white;
+border: none;
+padding: 10px;
+width: 100%;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+.card button:hover {
+background-color: darkgreen;
+}
+
+/* PRODUCT IMAGES */
+.product-img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+
+/* ORDER FORM */
+.order {
+padding: 30px;
+text-align: center;
+}
+
+.order input, .order select {
+width: 80%;
+max-width: 400px;
+padding: 10px;
+margin: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+.order-buttons button {
+background: green;
+color: white;
+padding: 12px;
+border: none;
+margin: 10px;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+.order-buttons button:hover {
+background-color: darkgreen;
+}
+
+.call-btn {
+display: inline-block;
+background: #ff3b00;
+color: white;
+padding: 12px;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s ease;
+}
+
+.call-btn:hover {
+background-color: #cc2b00;
+}
+
+/* CONTACT */
+.contact {
+padding: 30px;
+text-align: center;
+}
+
+/* FOOTER */
+footer {
+background: black;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 480px) {
+.order input, .order select {
+width: 100%;
+}
+
+.hero h1 {
+font-size: 2rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+}
+
+/* SMOOTH SCROLL */
+html {
+scroll-behavior: smooth;
+}
